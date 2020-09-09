@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="JS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="text/JavaScript" src="JS/jquery-1.2.6.pack.js"></script>
+    <script type="text/JavaScript" src="JS/jquery.maskedinput-1.1.4.pack.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div>
+        <!-- <form action="#" method="">
+            <div>
+                <label for=" ">CPF:</label>
+                <input name="cpf" type="text" id="cpf" maxlength="11" placeholder="000.000.000-00" />
+                <br></br>
+                <input type="button" name="validar" id="validar" value="Validar CPF" onClick="valida()" class="btn btn-primary" />
+            </div>
+        </form>-->
+
+        <br>
+        <h1>PhoenixBank</h1>
+        <div id="showme">
+
+            <form id="myform" class="form-horizontal" data-toggle="validator" onsubmit=" return validateForm(this)">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="fname">Nome Completo:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-static" id="nome" name="fname" placeholder="Digite seu nome Completo " required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for=" ">CPF:</label>
+                    <div class="col-sm-10">
+                        <input name="cpf" type="text" id="cpf" maxlength="11" placeholder="000.000.000-00" class="form-control-static" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="rg">RG:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-static" id="rg" name="rg" placeholder="Informe o seu RG" maxlength="9" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control-static" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="cep">CEP:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="cep" class="form-control-static" id="cep" placeholder="cep" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="fone">Celular:</label>
+                    <div class="col-sm-10">
+                        <input type="fone" name="fone" class="form-control-static" id="fone" placeholder="Informe o número de celular" maxlength="11" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="nickname">Nickname:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-static" name="nickname" id="nickname" placeholder="Digite seu nickname" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label for="">Você é universitario ?</label>
+                        <div class="checkbox">
+                            <label><input name = "aceitar" id = "chk-yean"type="checkbox" required onclick="SimorNo(this);"> sim </label>
+                            <label><input id = "chk-no"type="checkbox" required name="" onclick="noorYes(this);">não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="money">Informe sua renda mensal aproximada:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control-static" id="money" placeholder="R$ 0,00" required>
+                        <label><input type="checkbox" name="" id="renda"  required  onclick="verPermissao(this);"> Não possuo renda</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" name="validar" id="validar" value="Validar CPF" onClick="valida()" class="btn btn-primary" id="bat">Confirmar</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="table-responsive" id="divtb">
+                    <table class="table table-bordered" id="tb" border="3%">
+                        <thead scope="row" class="thead-light" id="the">
+                            <td>Nome Completo</td>
+                            <td>CPF</td>
+                            <td>RG</td>
+                            <td>Email</td>
+                            <td>CEP</td>
+                            <td>Celular</td>
+                            <td>Nickname</td>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="help-block with-errors"></div>
+            </form>
+        </div>
+    </div>
+    <hr>
+
+
+    <script src="JS/cpfValidation.js"></script>
+    <script src="JS/validacoes.js"></script>
+</body>
+
+</html>
